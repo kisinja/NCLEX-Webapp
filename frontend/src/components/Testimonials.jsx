@@ -1,7 +1,7 @@
 
 const Testimonials = () => {
     return (
-        <section className="py-12 bg-light-accent text-center">
+        <section className="py-12 bg-light-accent text-center px-6">
             <h2 className="text-3xl font-semibold text-primary mb-6">Success Stories</h2>
             <div className="max-w-4xl mx-auto">
                 <div className="space-y-6">

@@ -33,7 +33,7 @@ const Navbar = () => {
             <div className="container mx-auto flex justify-between">
                 <h1 className="text-lg font-bold">NCLEX Guidance</h1>
 
-                <ul className="flex space-x-6">
+                <ul className="md:flex space-x-6 hidden">
 
                     {navLinks.map((item, index) => (
                         <li key={index}>
@@ -44,6 +44,34 @@ const Navbar = () => {
                     ))}
 
                 </ul>
+
+                {/* Hamburger menu */}
+                <div className="block lg:hidden cursor-pointer" onClick={toggleMenu}>
+                    {
+                        !isOpen ? (
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                            </svg>
+                        ) : (
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="white">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        )
+                    }
+                </div>
+
+                {/* Mobile menu */}
+                {isOpen && (
+                    <ul className="absolute bg-primary left-0 right-0 h-screen flex flex-col gap-8 items-center justify-center">
+                        {navLinks.map((item, index) => (
+                            <li key={index}>
+                                <NavLink to={`${item.path}`} className="hover:text-accent" onClick={toggleMenu}>
+                                    {item.name}
+                                </NavLink>
+                            </li>
+                        ))}
+                    </ul>
+                )}
             </div>
         </nav>
     )
