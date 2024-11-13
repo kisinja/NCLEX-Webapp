@@ -7,7 +7,7 @@ input {
 }
 
 #home {
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(assets/nurses.jpeg);
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(https://res.cloudinary.com/dzrdfpulv/image/upload/v1731535908/nurses_fr5xly.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

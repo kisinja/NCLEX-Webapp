@@ -1,5 +1,3 @@
-import nurses from '../assets/nurses.jpeg';
-import { Link } from 'react-router-dom';
 
 const Contact = () => {
     return (
@@ -9,7 +7,7 @@ const Contact = () => {
             </div>
 
             <div className="my-10 flex flex-col justify-center md:flex-row gap-10 mb-28 text-sm items-center">
-                <img src={nurses} alt="" className=" md:w-[300px] md:max-w-[360px]" />
+                <img src="https://res.cloudinary.com/dzrdfpulv/image/upload/v1731535908/nurses_fr5xly.jpg" alt="" className=" md:w-[300px] md:max-w-[360px]" />
 
                 <div className="flex flex-col justify-center items-start gap-6">
                     <p className="font-semibold text-lg text-gray-600">Our Office</p>
@@ -23,15 +21,9 @@ const Contact = () => {
                         <span className="flex flex-col gap-2">
                             
                         </span>
-                        Tel: (415) 555-0132 <br /> Email: kisinjaelvis@gmail.com
+                        Tel: (415) 555-0132 <br /> Email: nclexguide@gmail.com
                     </p>
-                    <p className="font-semibold text-lg text-gray-600">CARRERS AT MEDIZONE</p>
-                    <p className="text-gray-500">Learn more about our team and job openings.</p>
-                    <button className="border border-black px-8 py-4 text-sm hover:bg-black hover:text-white transition-all duration-500">
-                        <Link to="/job-openings" onClick={() => scrollTo(0, 0)}>
-                            Explore Jobs
-                        </Link>
-                    </button>
+                    
                 </div>
             </div>
         </div>
